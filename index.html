@@ -1,86 +1,110 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QMB Nowak</title>
+    <title>QMB Freelancer Nowak</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f4f4f4;
+            text-align: center;
+            position: relative;
         }
         header {
-            background-color: #4CAF50;
+            background: #0073e6;
             color: white;
-            text-align: center;
             padding: 20px;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
         }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        .contact-form input, .contact-form textarea {
+        .background-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            height: 250px;
+            background: linear-gradient(135deg, #D97706 50%, transparent 50%);
+            z-index: 1;
         }
-        .contact-form button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        section {
+            margin: 40px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
         }
-        .contact-form button:hover {
-            background-color: #45a049;
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .profile-image {
             display: block;
-            margin: 0 auto;
+            margin: 20px auto;
             max-width: 200px;
             border-radius: 50%;
+            border: 5px solid #0073e6;
+        }
+        .info {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .contact {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
         }
     </style>
 </head>
 <body>
-    <header>QMB Nowak</header>
-    
-    <div class="container">
-        <h2>Über mich</h2>
-        <img src="/mnt/data/1581074556332.jpg" alt="Désirée Nowak" class="profile-image">
-        <p>Mein Name ist Désirée Nowak. Nach meiner abgeschlossenen Ausbildung und dem Abitur, das ich an der Abendschule absolviert habe, habe ich meinen Bachelor in Pflanzenbiotechnologie (B.Sc.) an der Leibniz Universität Hannover und meinen Master in Biotechnologie (M.Sc.) an der Beuth Hochschule Berlin abgeschlossen. Anschließend habe ich in verschiedenen Positionen in den Bereichen Qualitätsmanagement, Regulatory Affairs und Clinical Affairs gearbeitet. Ich habe Erfahrung als Head of Quality Assurance, Quality Engineer sowie Regulatory Affairs/Clinical Affairs Manager. Mein Fokus liegt auf der Vorbereitung von Audits, Prozessoptimierung und der Beratung im Qualitätsmanagement.</p>
-    </div>
-    
-    <div class="container">
-        <h2>Leistungen</h2>
-        <ul>
-            <li>Beratung im Qualitätsmanagement</li>
-            <li>Vorbereitung von Audits</li>
-            <li>Prozessoptimierung</li>
-        </ul>
-    </div>
-    
-    <div class="container">
-        <h2>Kontakt</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Ihr Name" required>
-            <input type="email" placeholder="Ihre E-Mail" required>
-            <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
-            <button type="submit">Absenden</button>
-        </form>
-    </div>
+    <div class="background-shape"></div>
+    <header>
+        M.Sc. Désirée Nowak
+    </header>
+    <section>
+        <div class="content">
+            <img src="/mnt/data/1581074556332.jpg" alt="Désirée Nowak" class="profile-image">
+            <h2>Über mich</h2>
+            <p>Mein Name ist Désirée Nowak. Nach meiner abgeschlossenen Ausbildung und dem Abitur, das ich an der Abendschule absolviert habe, habe ich meinen Bachelor in Pflanzenbiotechnologie (B.Sc.) an der Leibniz Universität Hannover und meinen Master in Biotechnologie (M.Sc.) an der Beuth Hochschule Berlin abgeschlossen. Anschließend habe ich in verschiedenen Positionen in den Bereichen Qualitätsmanagement, Regulatory Affairs und Clinical Affairs gearbeitet. Mein Fokus liegt auf der Vorbereitung von Audits, Prozessoptimierung und der Beratung im Qualitätsmanagement.</p>
+            <h2>Leistungen</h2>
+            <ul>
+                <li>Beratung im Qualitätsmanagement</li>
+                <li>Vorbereitung von Audits</li>
+                <li>Prozessoptimierung</li>
+            </ul>
+            <h2>Kontakt</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Ihr Name" required>
+                <input type="email" placeholder="Ihre E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+                <button type="submit">Absenden</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 QMB Freelancer Nowak
+    </footer>
 </body>
 </html>
